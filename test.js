@@ -28,11 +28,13 @@ let code = `
     
     Ok(neon::js::JsInteger::new(scope, fibnum))
 `;
-let runSyncRes = rustJit.runSync(code,'JsInteger')(5);
-assert.equal(runSyncRes,5,"rustJit.runSync error");
+let rustFibByCode = rustJit.compileSync(code,'JsInteger');
+console.log("rustJit.compileSync fib(5)=>5:"+rustFibByCode(5));
+assert.equal(rustFibByCode(5),5,"rustJit.runSync error");
 
-let runByFileSyncRes = rustJit.runByFileSync(path.join(__dirname,"test.rs"),'JsInteger')(5);
-assert.equal(runByFileSyncRes,5,"rustJit.runByFileSync error");
+let rustFibByFile = rustJit.compileByFileSync(path.join(__dirname,"test.rs"),'JsInteger');
+console.log("rustJit.compileByFileSync fib(6)=>8:"+rustFibByFile(6));
+assert.equal(rustFibByFile(6),8,"rustJit.runByFileSync error");
 
 
 

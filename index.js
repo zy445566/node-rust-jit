@@ -13,12 +13,12 @@ class RustJit
         this.syncRustJit = new SyncRustJit(this.neonBinPath,this.templatePath,this.binPath);
     }
     
-    runSync(code,JsResultType)
+    compileSync(code,JsResultType)
     {
         return this.syncRustJit.getRelease(code,JsResultType);
     }
     
-    runByFileSync(filePath,JsResultType)
+    compileByFileSync(filePath,JsResultType)
     {
         return this.syncRustJit.getRelease(fs.readFileSync(filePath).toString(),JsResultType);
     }
