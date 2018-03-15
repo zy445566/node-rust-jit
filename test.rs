@@ -6,10 +6,8 @@
             num = x2.value() as i32;
         }
     }
-    let mut fibnum:i32 = 0;
-    if num<2 {
-        fibnum = 1;
-    } else {
+    let mut fibnum:i32 = 1;
+    if num>2 {
         let mut a:i32 = 1;
         let mut b:i32 = 1;
         let mut c:i32 = 0;
