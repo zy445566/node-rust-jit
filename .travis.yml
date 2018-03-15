@@ -1,7 +1,8 @@
 sudo: false
 
-language: node_js
-language: rust
+language: 
+  - node_js
+  - rust
 
 rust:
   - stable
