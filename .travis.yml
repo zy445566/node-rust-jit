@@ -9,7 +9,7 @@ node_js:
   - stable
 
 
-before_install: curl -o rustup.sh https://sh.rustup.rs && sudo sh rustup.sh -y
+before_install: curl -sSf https://build.travis-ci.org/files/rustup-init.sh | sh -s -- --default-toolchain=$TRAVIS_RUST_VERSION -y
 
 script: npm install -g neon-cli && node test 
 
