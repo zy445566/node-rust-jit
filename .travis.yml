@@ -15,6 +15,6 @@ addons:
     packages:
     - python2.7
 
-script: curl -o rustup.sh https://sh.rustup.rs && sh rustup.sh -y && npm install -g neon-cli && node test 
+script: curl -o rustup.sh https://sh.rustup.rs && sudo sh rustup.sh -y && npm install -g neon-cli && node test 
 
 after_success: npm i codecov && codecov
