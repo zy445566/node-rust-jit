@@ -1,0 +1,28 @@
+{
+  "name": "rust-jit",
+  "version": "1.0.6",
+  "description": "node.JS run Rust language Just In Time",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zy445566/node-rust-jit.git"
+  },
+  "keywords": [
+    "jit",
+    "node",
+    "js",
+    "rust"
+  ],
+  "author": "zy445566",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zy445566/node-rust-jit/issues"
+  },
+  "homepage": "https://github.com/zy445566/node-rust-jit#readme",
+  "dependencies": {
+    "ejs": "^2.5.7"
+  }
+}

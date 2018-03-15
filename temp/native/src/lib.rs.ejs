@@ -1,0 +1,12 @@
+#[macro_use]
+extern crate neon;
+
+use neon::vm::{Call, JsResult};
+
+fn <%- codeMd5 %>(call: Call) -> JsResult<neon::js::<%- JsResultType %>> {
+    <%- code %>
+}
+
+register_module!(m, {
+    m.export("<%- codeMd5 %>", <%- codeMd5 %>)
+});

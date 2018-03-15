@@ -1,0 +1,14 @@
+{
+  "name": "temp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "zy445566 <zyct@vip.qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.1.22"
+  },
+  "scripts": {
+    "install": "neon build"
+  }
+}
