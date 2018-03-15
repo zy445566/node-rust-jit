@@ -1,7 +1,10 @@
 sudo: false
 
 language: node_js
+language: rust
 
+rust:
+  - stable
 
 node_js:
   - 6
@@ -15,6 +18,6 @@ addons:
     packages:
     - python2.7
 
-script: curl -o rustup.sh https://sh.rustup.rs && sh rustup.sh -y && npm install -g neon-cli && node test 
+script: npm install -g neon-cli && node test 
 
 after_success: npm i codecov && codecov

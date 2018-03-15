@@ -1,7 +1,7 @@
 # node-rust-jit
+[![Build Status](https://travis-ci.org/zy445566/node-rust-jit.svg?branch=master)](https://travis-ci.org/zy445566/node-rust-jit) 
 =========
 ## node.JS run Rust language Just In Time
-
 
 Installation
 ------------
