@@ -1,6 +1,7 @@
 "use strict";
 const SyncRustJit = require("./lib/SyncRustJit");
 const path = require('path');
+const fs = require('fs');
 
 class RustJit
 {
@@ -9,17 +10,17 @@ class RustJit
         this.neonBinPath = neonBinPath===""?"neon":neonBinPath;
         this.binPath = binPath===""?path.join(__dirname,"binPath"):binPath;
         this.templatePath = path.join(__dirname,'temp');
-        this.syncRustJit = new SyncRustJit(this.gypBinPath,this.templatePath,this.binPath);
+        this.syncRustJit = new SyncRustJit(this.neonBinPath,this.templatePath,this.binPath);
     }
     
     runSync(code,JsResultType)
     {
-        return this.syncRustJit.getRelease(code);
+        return this.syncRustJit.getRelease(code,JsResultType);
     }
     
     runByFileSync(filePath,JsResultType)
     {
-        return this.syncRustJit.getRelease(fs.readFileSync(filePath).toString());
+        return this.syncRustJit.getRelease(fs.readFileSync(filePath).toString(),JsResultType);
     }
 
     getSyncRustJit()
@@ -28,4 +29,4 @@ class RustJit
     }
 
 }
-module.exports = CJit;
+module.exports = RustJit;

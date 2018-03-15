@@ -58,5 +58,6 @@ typings/
 .env
 
 # gen file
-codeMd5*
-
+code_md5*
+Cargo.lock
+package-lock.json
