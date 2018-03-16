@@ -1,6 +1,6 @@
 {
   "name": "rust-jit",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "node.JS run Rust language Just In Time",
   "main": "index.js",
   "scripts": {
